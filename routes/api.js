@@ -8,7 +8,7 @@ var zahirr = db.get("zahirr");
 	console.log('')
 }
 
-var creator = "@FarZ"
+var creator = "@Reyzen"
 var ytdl = require('ytdl-core');
 var ytpl = require('ytpl');
 var secure = require('ssl-express-www');
@@ -144,7 +144,7 @@ loghandler = {
     }
 }
 
-const listkey = ["FarZ", "Api"];
+const listkey = ["Reyzen", "Api"];
 //router.use(favicon(__path + "/views/logo.ico"));
 
 var len = 15
@@ -208,7 +208,7 @@ router.get('/addapikey', (req, res, next) => {
 
     if (!apikey) return res.json(loghandler.notparam)
     if (!(status && apikeyInput && email && nomorhp && name && age && country && exp)) return res.json(loghandler.notAddApiKey)
-    if (apikey != 'FarZ') return res.sendFile(__path + '/views/eror.html')
+    if (apikey != 'Reyzen') return res.sendFile(__path + '/views/eror.html')
 
     try {
         zahirr.insert({
@@ -247,7 +247,7 @@ router.get('/remove', (req, res, next) => {
 
     if (!apikey) return res.json(loghandler.notparam)
     if (!(status && apikeyInput && email && nomorhp && name && age && country && exp)) return res.json(loghandler.notAddApiKey)
-    if (apikey != 'FarZ') return res.sendFile(__path + '/views/eror.html')
+    if (apikey != 'Reyzen') return res.sendFile(__path + '/views/eror.html')
 
     try {
         zahirr.remove({
@@ -299,7 +299,7 @@ router.get('/cewe/vietnam', async (req, res, next) => {
         var result = data;
         var result = data[Math.floor(Math.random() * data.length)];
              res.json({
-             	author: 'FarZ',
+             	author: 'Reyzen',
                  result
              })
          })
